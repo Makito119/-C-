@@ -77,20 +77,20 @@
 //void nakashima::t2cl::mergeSort(std::vector<int>& list, const int left, const int right)
 //{
 //    
-//    /*”z—ñ‚Ì—v‘f‚ªˆê‚Â‚È‚çƒŠƒ^[ƒ“*/
+//    /*é…åˆ—ã®è¦ç´ ãŒä¸€ã¤ãªã‚‰ãƒªã‚¿ãƒ¼ãƒ³*/
 //    if (left >= right){
 //        return;
 //        }
 //    int mid = (left + right)/2;  
 //    mergeSort(list, left, mid);
 //    mergeSort(list, mid + 1, right);
-//    /*¶•”•ª‚ğì‹Æ—Ìˆæ‚ÉƒRƒs[*/
+//    /*å·¦éƒ¨åˆ†ã‚’ä½œæ¥­é ˜åŸŸã«ã‚³ãƒ”ãƒ¼*/
 //    std::vector<int> temp(list.size());
 //    int i, j;
 //    for (i = left; i <= mid; i++) {
 //        temp[i] = list[i];
 //    }
-//    /*‰E•”•ª‚ğì‹Æ—Ìˆæ‚ÉƒRƒs[*/
+//    /*å³éƒ¨åˆ†ã‚’ä½œæ¥­é ˜åŸŸã«ã‚³ãƒ”ãƒ¼*/
 //    for (i = mid + 1, j = right; i <= right; i++, j--) {
 //        temp[i] = list[j];
 //    }
@@ -117,9 +117,9 @@
 //void nakashima::t2cl::comparisonOfSortingMethods(const std::string& filepath)
 //{
 //    std::string outputFilepath=filepath;
-//    // std::string outputFilepath = "%userprofile%/documents/output.txt"; // ‚±‚¿‚ç‚ÌƒpƒX‚É•Ï‚¦‚Ä‚İ‚æ‚¤
+//    // std::string outputFilepath = "%userprofile%/documents/output.txt"; // ã“ã¡ã‚‰ã®ãƒ‘ã‚¹ã«å¤‰ãˆã¦ã¿ã‚ˆã†
 //    std::ofstream ofs(outputFilepath);
-//    ofs << "Às‚·‚é”z—ñlistF" <<"\n";
+//    ofs << "å®Ÿè¡Œã™ã‚‹é…åˆ—listï¼š" <<"\n";
 //    for (int i = 0; i < list.size(); i++) {
 //        ofs << list[i] << "\t";
 //    }
@@ -141,8 +141,8 @@
 //    for (int i = 0; i < 3; i++) {
 //        if (i == 0) {
 //            begin = clock::now();
-//            std::cout << "Bubblesort‚ğÀs‚µ‚Ü‚·" << std::endl;
-//            ofs << "Bubblesort‚ğÀs‚µ‚Ü‚·" << std::endl;
+//            std::cout << "Bubblesortã‚’å®Ÿè¡Œã—ã¾ã™" << std::endl;
+//            ofs << "Bubblesortã‚’å®Ÿè¡Œã—ã¾ã™" << std::endl;
 //            nakashima::t2cl::bubbleSort(bubble);
 //            end = clock::now();
 //            elapsed_time = std::chrono::duration_cast<time_resolution>(end - begin);
@@ -152,8 +152,8 @@
 //        else if (i == 1) {
 //
 //            begin = clock::now();
-//            std::cout << "Quicksort‚ğÀs‚µ‚Ü‚·" << std::endl;
-//            ofs << "Quicksort‚ğÀs‚µ‚Ü‚·" << std::endl;
+//            std::cout << "Quicksortã‚’å®Ÿè¡Œã—ã¾ã™" << std::endl;
+//            ofs << "Quicksortã‚’å®Ÿè¡Œã—ã¾ã™" << std::endl;
 //            nakashima::t2cl::quickSort(quick, 0, quick.size()-1);
 //            end = clock::now();
 //            elapsed_time = std::chrono::duration_cast<time_resolution>(end - begin);
@@ -162,8 +162,8 @@
 //        }
 //        else if (i == 2) {
 //            begin = clock::now();
-//            std:: cout<<"Mergesort‚ğÀs‚µ‚Ü‚·" << std::endl;
-//            ofs << "Mergesort‚ğÀs‚µ‚Ü‚·" << std::endl;
+//            std:: cout<<"Mergesortã‚’å®Ÿè¡Œã—ã¾ã™" << std::endl;
+//            ofs << "Mergesortã‚’å®Ÿè¡Œã—ã¾ã™" << std::endl;
 //            nakashima::t2cl::mergeSort(merge, 0, merge.size()-1);
 //            end = clock::now();
 //            elapsed_time = std::chrono::duration_cast<time_resolution>(end - begin);
@@ -174,30 +174,30 @@
 //   
 //      if (Bubbletime < Quicktime) {
 //         if (Mergetime < Bubbletime) {
-//             std::cout << "Œv‘ªŠÔ‚ÍQuicksort>Bubblesort>Mergesort" << std::endl;
-//             ofs << "Œv‘ªŠÔ‚ÍQuicksort>Bubblesort>Mergesort";
+//             std::cout << "è¨ˆæ¸¬æ™‚é–“ã¯Quicksort>Bubblesort>Mergesort" << std::endl;
+//             ofs << "è¨ˆæ¸¬æ™‚é–“ã¯Quicksort>Bubblesort>Mergesort";
 //         }
 //         else if (Mergetime > Quicktime) {
-//             std::cout << "Œv‘ªŠÔ‚ÍMergesort>Quicksort>Bubblesort" << std::endl;
-//             ofs << "Œv‘ªŠÔ‚ÍQuicksort>Bubblesort>Mergesort";
+//             std::cout << "è¨ˆæ¸¬æ™‚é–“ã¯Mergesort>Quicksort>Bubblesort" << std::endl;
+//             ofs << "è¨ˆæ¸¬æ™‚é–“ã¯Quicksort>Bubblesort>Mergesort";
 //         }
 //         else {
-//             std::cout << "Œv‘ªŠÔ‚ÍQuicksort>Mergesort>Bubblesort" << std::endl;
-//             ofs << "Œv‘ªŠÔ‚ÍQuicksort>Mergesort>Bubblesort";
+//             std::cout << "è¨ˆæ¸¬æ™‚é–“ã¯Quicksort>Mergesort>Bubblesort" << std::endl;
+//             ofs << "è¨ˆæ¸¬æ™‚é–“ã¯Quicksort>Mergesort>Bubblesort";
 //         }
 //     }
 //     else {
 //          if (Mergetime < Quicktime) {
-//              std::cout << "Œv‘ªŠÔ‚ÍBubblesort>Quicksort>Mergesort" << std::endl;
-//              ofs << "Œv‘ªŠÔ‚ÍBubblesort>Quicksort>Mergesort";
+//              std::cout << "è¨ˆæ¸¬æ™‚é–“ã¯Bubblesort>Quicksort>Mergesort" << std::endl;
+//              ofs << "è¨ˆæ¸¬æ™‚é–“ã¯Bubblesort>Quicksort>Mergesort";
 //          }
 //          else if (Mergetime > Bubbletime) {
-//             std::cout << "Œv‘ªŠÔ‚ÍMergesort>Bubblesort>Quicksort" << std::endl;
-//             ofs << "Œv‘ªŠÔ‚ÍMergesort>Bubblesort>Quicksort";
+//             std::cout << "è¨ˆæ¸¬æ™‚é–“ã¯Mergesort>Bubblesort>Quicksort" << std::endl;
+//             ofs << "è¨ˆæ¸¬æ™‚é–“ã¯Mergesort>Bubblesort>Quicksort";
 //         }
 //         else {
-//             std::cout << "Œv‘ªŠÔ‚ÍBubblesort>Mergesort>Quicksort" << std::endl;
-//             ofs << "Œv‘ªŠÔ‚ÍBubblesort>Mergesort>Quicksort";
+//             std::cout << "è¨ˆæ¸¬æ™‚é–“ã¯Bubblesort>Mergesort>Quicksort" << std::endl;
+//             ofs << "è¨ˆæ¸¬æ™‚é–“ã¯Bubblesort>Mergesort>Quicksort";
 //         }
 //     }
 //       
