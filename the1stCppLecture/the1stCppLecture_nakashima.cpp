@@ -1,71 +1,71 @@
 #include "the1stCppLecture_nakashima.hpp"
 
-// ‰Û‘è1
+// èª²é¡Œ1
 void nakashima::t1cl::helloWorld()
 {
-    std::cout << "Hello, World!\n";//1,std::‚ð“ü‚ê‚é,2,""‚ð“ü‚ê‚é,3,:‚ð;‚É•ÏX
+    std::cout << "Hello, World!\n";//1,std::ã‚’å…¥ã‚Œã‚‹,2,""ã‚’å…¥ã‚Œã‚‹,3,:ã‚’;ã«å¤‰æ›´
 }
 
-// ‰Û‘è2
+// èª²é¡Œ2
 void nakashima::t1cl::typeExample()
 {
-    std::cout << "®”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << std::endl;//std::‚ð“ü‚ê‚é
+    std::cout << "æ•´æ•°ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„" << std::endl;//std::ã‚’å…¥ã‚Œã‚‹
     int num;
-    std::cin >> num;//<<‚ð>>‚É•ÏX
+    std::cin >> num;//<<ã‚’>>ã«å¤‰æ›´
     if (num > 0)
     {
-        std::cout << "num‚Í³‚Ì”‚Å‚·\n";
+        std::cout << "numã¯æ­£ã®æ•°ã§ã™\n";
     }
-    else if (num == 0)//1,=‚ð==‚É•ÏX 2,if‚ðelse if‚É•ÏX
+    else if (num == 0)//1,=ã‚’==ã«å¤‰æ›´ 2,ifã‚’else ifã«å¤‰æ›´
     {
-        std::cout << "num‚Í0‚Å‚·\n";
+        std::cout << "numã¯0ã§ã™\n";
     }
     else
     {
-        std::cout << "num‚Í•‰‚Ì”‚Å‚·\n";
+        std::cout << "numã¯è² ã®æ•°ã§ã™\n";
     }
 }
 
-// ‰Û‘è3
+// èª²é¡Œ3
 void nakashima::t1cl::ifExample()
 {
-    std::cout << "ˆê‚Â–Ú‚Ì®”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << std::endl;
+    std::cout << "ä¸€ã¤ç›®ã®æ•´æ•°ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„" << std::endl;
     int max;
     std::cin >> max;
-    std::cout << "“ñ‚Â–Ú‚Ì®”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << std::endl;
+    std::cout << "äºŒã¤ç›®ã®æ•´æ•°ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„" << std::endl;
     int min;
     std::cin >> min;
     if (max < min)
     {
-        int temp = min;//temp‚ð’Ç‰Á
+        int temp = min;//tempã‚’è¿½åŠ 
         min = max;
         max = temp;
     }
-    std::cout << "max:" << max << "\tmin:" << min << std::endl;//"‚ð’Ç‰Á
+    std::cout << "max:" << max << "\tmin:" << min << std::endl;//"ã‚’è¿½åŠ 
 }
 
-// ‰Û‘è4
+// èª²é¡Œ4
 void nakashima::t1cl::forExample()
 {
-    for (int i=0; i < 10; ++i)//1,,‚ð;‚É•ÏX,2,;‚ðíœ 3,i=0
+    for (int i=0; i < 10; ++i)//1,,ã‚’;ã«å¤‰æ›´,2,;ã‚’å‰Šé™¤ 3,i=0
     {
         std::cout << i << std::endl;
     }
 }
 
-// ‰Û‘è5
+// èª²é¡Œ5
 void nakashima::t1cl::vectorExample()
 {
-    std::vector<int> ary(10);//<int>‚ð“ü—Í
-    for (std::size_t i = 0; i < ary.size(); ++i) {//std::size_t‚ð’Ç‰Á‚µAint‚ðíœ
+    std::vector<int> ary(10);//<int>ã‚’å…¥åŠ›
+    for (std::size_t i = 0; i < ary.size(); ++i) {//std::size_tã‚’è¿½åŠ ã—ã€intã‚’å‰Šé™¤
         ary[i] = i;
     }
-    for (std::size_t i = 0; i < ary.size(); ++i) {//60s–Ú‚Æ“¯‚¶‚­
-        std::cout << ary[i] <<std::endl;//()‚ð[]‚É•ÏX
+    for (std::size_t i = 0; i < ary.size(); ++i) {//60è¡Œç›®ã¨åŒã˜ã
+        std::cout << ary[i] <<std::endl;//()ã‚’[]ã«å¤‰æ›´
     }
 }
-// ‰Û‘è6
-void nakashima::t1cl::swap(std::vector<int> &num)//&‚ð’Ç‰Á
+// èª²é¡Œ6
+void nakashima::t1cl::swap(std::vector<int> &num)//&ã‚’è¿½åŠ 
 {
     int temp = num[1];
     num[1] = num[0];
@@ -75,30 +75,30 @@ void nakashima::t1cl::funcExample()
 {
     std::vector<int> num(2);
 
-    std::cout << "ˆê‚Â–Ú‚Ì®”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << std::endl;
+    std::cout << "ä¸€ã¤ç›®ã®æ•´æ•°ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„" << std::endl;
     std::cin >> num[0];
 
-    std::cout << "“ñ‚Â–Ú‚Ì®”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << std::endl;
+    std::cout << "äºŒã¤ç›®ã®æ•´æ•°ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„" << std::endl;
     std::cin >> num[1];
     if (num[0] < num[1]) {
-    swap(num);//[]‚ðíœ
+    swap(num);//[]ã‚’å‰Šé™¤
 }
     std::cout << "max:" << num[0] << "\tmin:" << num[1] << std::endl;
 }
 
-// ‰Û‘è7
+// èª²é¡Œ7
 void nakashima::t1cl::foutPathExample()
-{//{‚ð’Ç‰Á‚·‚é
-    std::string outputFilepath = "output";//''‚ð""‚É•ÏX
+{//{ã‚’è¿½åŠ ã™ã‚‹
+    std::string outputFilepath = "output";//''ã‚’""ã«å¤‰æ›´
     std::ofstream ofs(outputFilepath);
-    for (int i = 0; i < 10; ++i)//1,==‚ð=‚É•ÏX 2,;‚ðíœ
+    for (int i = 0; i < 10; ++i)//1,==ã‚’=ã«å¤‰æ›´ 2,;ã‚’å‰Šé™¤
     {
         ofs << i << "\n";
      }
 }
 
-// void name::t1cl::run(int num = 0); //ƒwƒbƒ_‚Å‚Í‚±‚Ì‚æ‚¤‚ÉéŒ¾‚·‚é‚±‚Æ
-// runŠÖ”‚Í‰Û‘è‘ÎÛ‚Å‚Í‚È‚¢‚Å‚·
+// void name::t1cl::run(int num = 0); //ãƒ˜ãƒƒãƒ€ã§ã¯ã“ã®ã‚ˆã†ã«å®£è¨€ã™ã‚‹ã“ã¨
+// runé–¢æ•°ã¯èª²é¡Œå¯¾è±¡ã§ã¯ãªã„ã§ã™
 void nakashima::t1cl::run(int num)
 {
     switch (num) {
@@ -131,4 +131,4 @@ void nakashima::t1cl::run(int num)
         std::cout << "run foutPathTest" << std::endl;
         t1cl::foutPathExample();
     }
-}  //}‚ð“ü‚ê‚é
+}  //}ã‚’å…¥ã‚Œã‚‹
