@@ -33,11 +33,11 @@ void nakashima::t3cl::imshow(const std::string& path, cv::Mat& image)
 	cv::destroyAllWindows();
 }
 
-//ƒJƒ‰[‰æ‘œ‚ğƒOƒŒ[ƒXƒP[ƒ‹‚É•ÏŠ·
+//ã‚«ãƒ©ãƒ¼ç”»åƒã‚’ã‚°ãƒ¬ãƒ¼ã‚¹ã‚±ãƒ¼ãƒ«ã«å¤‰æ›
 void nakashima::t3cl::bgr2gray(const cv::Mat3b& src, cv::Mat1b& dst)
 {
 	dst = cv::Mat1b(src.size());
-	// dst = cv::Mat1b(src.rows, src.cols); //‚±‚Á‚¿‚Å‚à‰Â
+	// dst = cv::Mat1b(src.rows, src.cols); //ã“ã£ã¡ã§ã‚‚å¯
 
 	for (int y = 0; y < src.rows; ++y) {
 		for (int x = 0; x < src.cols; ++x) {
@@ -46,7 +46,7 @@ void nakashima::t3cl::bgr2gray(const cv::Mat3b& src, cv::Mat1b& dst)
 	}
 }
 
-//‚Q’l‰»‚·‚é
+//ï¼’å€¤åŒ–ã™ã‚‹
 void nakashima::t3cl::binarization(const cv::Mat1b& src, cv::Mat1b& dst, int thresh)
 {
 	dst = cv::Mat1b(src.size());
@@ -58,7 +58,7 @@ void nakashima::t3cl::binarization(const cv::Mat1b& src, cv::Mat1b& dst, int thr
 	}
 }
 
-//”Z“xŠK’²•ÏŠ·
+//æ¿ƒåº¦éšèª¿å¤‰æ›
 void nakashima::t3cl::contrastStretching(const cv::Mat1b& src, cv::Mat1b& dst)
 {
 	int max = 0;
@@ -80,7 +80,7 @@ void nakashima::t3cl::contrastStretching(const cv::Mat1b& src, cv::Mat1b& dst)
 	}
 
 }
-//‚R‚Â‚Ì””äŠr
+//ï¼“ã¤ã®æ•°æ¯”è¼ƒ
 int nakashima::t3cl::max(double a, double b, double c) {
 	int max = a;
 	if (b >= max) max = b;
@@ -98,7 +98,7 @@ int nakashima::t3cl::min(double a, double b, double c) {
 	return min;
 }
 
-//HSV•ÏŠ·
+//HSVå¤‰æ›
 void nakashima::t3cl::bgr2hsv(const cv::Mat3b& src, cv::Mat3b& dst) {
 	dst = src.clone();
 	double max = 255.0;
@@ -123,7 +123,7 @@ void nakashima::t3cl::bgr2hsv(const cv::Mat3b& src, cv::Mat3b& dst) {
 	}
 }
 
-//ƒ[ƒƒpƒfƒBƒ“ƒO
+//ã‚¼ãƒ­ãƒ‘ãƒ‡ã‚£ãƒ³ã‚°
 void nakashima::t3cl::zeroPadding(const cv::Mat1b& src, cv::Mat1b& dst, int paddingWidth)
 {
 	dst = cv::Mat1b::zeros((src.rows) + paddingWidth * 2, (src.cols) + paddingWidth * 2);
@@ -135,7 +135,7 @@ void nakashima::t3cl::zeroPadding(const cv::Mat1b& src, cv::Mat1b& dst, int padd
 	}
 }
 
-//ƒ[ƒƒpƒfƒBƒ“ƒO(ƒJƒ‰[)
+//ã‚¼ãƒ­ãƒ‘ãƒ‡ã‚£ãƒ³ã‚°(ã‚«ãƒ©ãƒ¼)
 void nakashima::t3cl::zeroPadding(const cv::Mat3b& src, cv::Mat3b& dst, int paddingWidth)
 {
 	dst = cv::Mat3b::zeros((src.rows) + paddingWidth * 2, (src.cols) + paddingWidth * 2);
@@ -149,7 +149,7 @@ void nakashima::t3cl::zeroPadding(const cv::Mat3b& src, cv::Mat3b& dst, int padd
 
 }
 
-//ƒRƒs[ƒpƒfƒBƒ“ƒO
+//ã‚³ãƒ”ãƒ¼ãƒ‘ãƒ‡ã‚£ãƒ³ã‚°
 void nakashima::t3cl::copyPadding(const cv::Mat1b& src, cv::Mat1b& dst, int paddingWidth)
 {
 	dst = cv::Mat1b::zeros((src.rows) + paddingWidth * 2, (src.cols) + paddingWidth * 2);
@@ -186,7 +186,7 @@ void nakashima::t3cl::copyPadding(const cv::Mat1b& src, cv::Mat1b& dst, int padd
 	}
 }
 
-//ƒRƒs[ƒpƒfƒBƒ“ƒO(ƒJƒ‰[)
+//ã‚³ãƒ”ãƒ¼ãƒ‘ãƒ‡ã‚£ãƒ³ã‚°(ã‚«ãƒ©ãƒ¼)
 void nakashima::t3cl::copyPadding(const cv::Mat3b& src, cv::Mat3b& dst, int paddingWidth)
 {
 	dst = cv::Mat3b::zeros((src.rows) + paddingWidth * 2, (src.cols) + paddingWidth * 2);
@@ -225,7 +225,7 @@ void nakashima::t3cl::copyPadding(const cv::Mat3b& src, cv::Mat3b& dst, int padd
 	}
 }
 
-//–c’£
+//è†¨å¼µ
 void nakashima::t3cl::dilate(const cv::Mat1b& src, cv::Mat1b& dst, int th)
 {
 	dst = src.clone();
@@ -261,7 +261,7 @@ void nakashima::t3cl::dilate(const cv::Mat1b& src, cv::Mat1b& dst, int th)
 	}
 }
 
-//ûk
+//åç¸®
 void nakashima::t3cl::erode(const cv::Mat1b& src, cv::Mat1b& dst, int th)
 {
 	dst = src.clone();
@@ -306,7 +306,7 @@ void nakashima::t3cl::erode(const cv::Mat1b& src, cv::Mat1b& dst, int th)
 	}
 }
 
-//ƒ\[ƒxƒ‹ƒtƒBƒ‹ƒ^
+//ã‚½ãƒ¼ãƒ™ãƒ«ãƒ•ã‚£ãƒ«ã‚¿
 void nakashima::t3cl::sobel(const cv::Mat1b& src, cv::Mat1b& dst, bool th)
 {
 	dst = src.clone();
@@ -354,7 +354,7 @@ void nakashima::t3cl::sobel(const cv::Mat1b& src, cv::Mat1b& dst, bool th)
 	}
 }
 
-//ƒvƒŠƒ…[ƒEƒBƒbƒgƒtƒBƒ‹ƒ^
+//ãƒ—ãƒªãƒ¥ãƒ¼ã‚¦ã‚£ãƒƒãƒˆãƒ•ã‚£ãƒ«ã‚¿
 void nakashima::t3cl::prewitt(const cv::Mat1b& src, cv::Mat1b& dst, bool th)
 {
 	dst = src.clone();
@@ -450,7 +450,7 @@ void nakashima::t3cl::gaussian(const cv::Mat1b& src, cv::Mat1b& dst, int size, i
 	nakashima::t3cl::copyPadding(src, temp, width);
 	cv::Mat1d filter(size, size);
 	double sum = 0;
-	//ƒKƒEƒVƒAƒ“ƒtƒBƒ‹ƒ^‚ğ‚Â‚­‚é
+	//ã‚¬ã‚¦ã‚·ã‚¢ãƒ³ãƒ•ã‚£ãƒ«ã‚¿ã‚’ã¤ãã‚‹
 	for (int y = -width; y <= width; ++y) {
 		for (int x = -width; x <= width; ++x) {
 
@@ -460,7 +460,7 @@ void nakashima::t3cl::gaussian(const cv::Mat1b& src, cv::Mat1b& dst, int size, i
 	}
 
 
-	//‰‰Z
+	//æ¼”ç®—
 	for (int i = 0; i < size; ++i) {
 		for (int j = 0; j < size; ++j) {
 			filter(j, i) = filter(j, i) / sum;
