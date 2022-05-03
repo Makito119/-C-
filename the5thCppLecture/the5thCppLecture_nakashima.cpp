@@ -23,7 +23,7 @@ void nakashima::t5cl::labeling(const cv::Mat1b& src, cv::Mat1i& dst)
 	}
 	A[0] = 0;
 
-	//ˆêŽŸƒXƒLƒƒƒ“
+	//ä¸€æ¬¡ã‚¹ã‚­ãƒ£ãƒ³
 	int a = 1;
 	for (int y = 1; y < temp2.rows - 1; ++y) {
 		for (int x = 1; x < temp2.cols - 1; ++x) {
@@ -124,7 +124,7 @@ void nakashima::t5cl::labeling(const cv::Mat1b& src, cv::Mat1i& dst)
 
 	}
 
-	//d•¡‚µ‚½’l‚ð“‡
+	//é‡è¤‡ã—ãŸå€¤ã‚’çµ±åˆ
 	for (int y = 1; y < temp2.rows - 1; ++y) {
 		for (int x = 1; x < temp2.cols - 1; ++x) {
 			for (int i = 1; i < 256; i++) {
@@ -136,7 +136,7 @@ void nakashima::t5cl::labeling(const cv::Mat1b& src, cv::Mat1i& dst)
 	}
 	
 	
-	//ƒ‰ƒxƒ‹‚Ì’l‚ð’²®
+	//ãƒ©ãƒ™ãƒ«ã®å€¤ã‚’èª¿æ•´
 	long C[1024];
 	int v = 0;
 	int wid = 1;
@@ -159,7 +159,7 @@ void nakashima::t5cl::labeling(const cv::Mat1b& src, cv::Mat1i& dst)
 		}
 	}
 
-	//o—Í‰æ‘œ
+	//å‡ºåŠ›ç”»åƒ
 	/*int D[50];
 	int d = 0;
 	for (int y = 1; y < temp3.rows - 1; ++y) {
@@ -227,7 +227,7 @@ void nakashima::t5cl::run(const int num, const std::string& imagePath, const std
 		//    std::cout << "run shallowConvolution ";
 		//    {
 		//        cv::Mat3b conv;
-		//        // ÝŒv‚µ‚½ƒtƒBƒ‹ƒ^‰ÂŽ‹‰»—p‚Ìo—Í
+		//        // è¨­è¨ˆã—ãŸãƒ•ã‚£ãƒ«ã‚¿å¯è¦–åŒ–ç”¨ã®å‡ºåŠ›
 		//        std::vector<cv::Mat1f> outputCreatedFilters_1st, outputCreatedFilters_2nd;
 		//        t5cl::shallowConvolution(lena, conv, outputCreatedFilters_1st, outputCreatedFilters_2nd);
 		//        t3cl::imshow("conv", conv);
