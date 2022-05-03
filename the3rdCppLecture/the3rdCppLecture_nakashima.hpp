@@ -1,7 +1,7 @@
 #ifndef HEADER_HPP
 #define HEADER_HPP
 
-#define _CRT_SECURE_NO_WARNINGS // ‚Ğ‚Æ‚Ü‚¸‚¨‚Ü‚¶‚È‚¢
+#define _CRT_SECURE_NO_WARNINGS // ã²ã¨ã¾ãšãŠã¾ã˜ãªã„
 #include <iostream>
 #include <string>
 #include<cmath>
@@ -10,7 +10,7 @@
 #include<chrono>
 #include<thread>
 #include<algorithm>//max,min
-#include <opencv2/opencv.hpp> // opencv —pƒCƒ“ƒNƒ‹[ƒhƒtƒ@ƒCƒ‹
+#include <opencv2/opencv.hpp> // opencv ç”¨ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ãƒ•ã‚¡ã‚¤ãƒ«
 
 #endif
 
