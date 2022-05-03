@@ -6,25 +6,25 @@
 #include<thread>
 namespace nakashima {
     namespace t2cl {
-        // 2ŸŒ³À•WC(x1, y1)C(x2, y2)‚ğ“ü—Í‚µC2“_ŠÔ‚Ì‹——£‚ğ‹‚ß‚éŠÖ”
+        // 2æ¬¡å…ƒåº§æ¨™ï¼Œ(x1, y1)ï¼Œ(x2, y2)ã‚’å…¥åŠ›ã—ï¼Œ2ç‚¹é–“ã®è·é›¢ã‚’æ±‚ã‚ã‚‹é–¢æ•°
         double calcTheDistanceBetween(const int coordinateX1, const int coordinateY1, const int coordinateX2, const int coordinateY2);
-        // ”¼Œax[m]‚Ì‹…‚Ì•\–ÊÏ‚Æ‘ÌÏ‚ğ‹‚ß‚éŠÖ”
-        // ‰~ü—¦‚ÍPI‚ğg‚¤‚±‚Æ
+        // åŠå¾„x[m]ã®çƒã®è¡¨é¢ç©ã¨ä½“ç©ã‚’æ±‚ã‚ã‚‹é–¢æ•°
+        // å††å‘¨ç‡ã¯PIã‚’ä½¿ã†ã“ã¨
         constexpr double PI = 3.14;
         double calcSphereVolume(const double radius);
         double calcSphereSurfaceArea(const double radius);
-        //list‚ğì‚é
+        //listã‚’ä½œã‚‹
        
         void swap(int *i,int *j);
-        // bubble sorti’l‚Ì“ü‚ê‘Ö‚¦‚É‚Í‘æ1‰ñ‰Û‘è‚Åì¬‚µ‚½swapŠÖ”‚ğg—p‚¹‚æj
+        // bubble sortï¼ˆå€¤ã®å…¥ã‚Œæ›¿ãˆã«ã¯ç¬¬1å›èª²é¡Œã§ä½œæˆã—ãŸswapé–¢æ•°ã‚’ä½¿ç”¨ã›ã‚ˆï¼‰
         void bubbleSort(std::vector<int>& list);
         // quick sort
         int partition(std::vector<int>& list, const int left, const int right);
         void quickSort(std::vector<int>& list, const int left, const int right);
         //maerge sort
         void mergeSort(std::vector<int>& list, const int left, const int right);
-        // sort3í‚ÌÀsŠÔ‚ÌŒv‘ª‚Æ”äŠr‚ğ‚¹‚æ
+        // sort3ç¨®ã®å®Ÿè¡Œæ™‚é–“ã®è¨ˆæ¸¬ã¨æ¯”è¼ƒã‚’ã›ã‚ˆ
         void comparisonOfSortingMethods(const std::string& filepath);
-        void run(int num = 0); //ƒwƒbƒ_‚Å‚Í‚±‚Ì‚æ‚¤‚ÉéŒ¾‚·‚é‚±‚Æ
+        void run(int num = 0); //ãƒ˜ãƒƒãƒ€ã§ã¯ã“ã®ã‚ˆã†ã«å®£è¨€ã™ã‚‹ã“ã¨
     }
 }
